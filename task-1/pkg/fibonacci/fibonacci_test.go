@@ -11,9 +11,11 @@ func TestNumber(t *testing.T) {
 		args args
 		want int
 	}{
-		{"first - zerro", args{1}, 0},
-		{"second - one", args{2}, 1},
-		{"eight - thirteen", args{8}, 13},
+		{name: "1 - 1", args: args{1}, want: 1},
+		{name: "2 - 2", args: args{2}, want: 2},
+		{name: "3 - 3", args: args{3}, want: 3},
+		{name: "4 - 5", args: args{4}, want: 5},
+		{name: "6 - 13", args: args{6}, want: 13},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
